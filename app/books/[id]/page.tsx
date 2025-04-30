@@ -12,13 +12,16 @@ interface Book {
   notes: string;
   user_id: string;
   created_at: string;
+
+}
+
+interface BookPageProps {
+  params: { id: string };
 }
 
 export default async function EditBookPage({
   params,
-}: {
-  params: { id: string };
-}) {
+}: BookPageProps) {
   const supabase = await createServerClient();
   const {
     data: { session },
@@ -100,8 +103,8 @@ export default async function EditBookPage({
           <label htmlFor="cover" className="block font-medium">Cover</label>
           <input type="file" name="cover" id="cover" required
             className="w-full border rounded px-2 py-1" />
-          
         </div>
+          
         <div className="flex items-center space-x-2">
           <button
             type="submit"
