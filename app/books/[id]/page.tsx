@@ -101,7 +101,7 @@ export default async function EditBookPage({
         </div>
         <div>
           <label htmlFor="cover" className="block font-medium">Cover</label>
-          <input type="file" name="cover" id="cover" required
+          <input type="file" name="cover" id="cover" 
             className="w-full border rounded px-2 py-1" />
         </div>
           
