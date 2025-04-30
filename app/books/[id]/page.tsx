@@ -15,13 +15,13 @@ interface Book {
 
 }
 
-interface BookPageProps {
+interface PageProps {
   params: { id: string };
 }
 
 export default async function EditBookPage({
   params,
-}: BookPageProps) {
+}: PageProps) {
   const supabase = await createServerClient();
   const {
     data: { session },
