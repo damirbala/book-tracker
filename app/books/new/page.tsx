@@ -44,7 +44,7 @@ export default async function NewBookPage() {
             className="w-full border rounded px-2 py-1"
           >
             <option value="reading">Reading</option>
-            <option value="read">Read</option>
+            <option value="read">Completed</option>
           </select>
         </div>
         <div>
@@ -66,6 +66,12 @@ export default async function NewBookPage() {
             rows={4}
             className="w-full border rounded px-2 py-1"
           />
+        </div>
+        <div>
+          <label htmlFor="cover" className="block font-medium">Cover</label>
+          <input type="file" name="cover" id="cover" required
+            className="w-full border rounded px-2 py-1" />
+          
         </div>
         <div className="flex items-center space-x-2">
           <button
